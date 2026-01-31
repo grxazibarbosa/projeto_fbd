@@ -1,8 +1,8 @@
-# Projeto – Fundamentos de Banco de Dados
+# Gestão de Petrimônios Históricos
 
 Projeto realizado para a disciplina de **Fundamentos de Banco de Dados**.
 
-O projeto foi dividido em **três etapas**, que consistiam em:
+O projeto foi dividido em etapas, que consistiam em:
 - Modelagem **EER**
 - Modelagem **Relacional**
 - Criação e povoamento do **Banco de Dados**
@@ -10,10 +10,6 @@ O projeto foi dividido em **três etapas**, que consistiam em:
 - Geração de um **gráfico**
 
 ---
-
-## Tema do Projeto
-
-**Gestão de Patrimônios Históricos**
 
 ### Equipe
 - **Graziele Ferreira Barbosa**  
@@ -113,6 +109,20 @@ FROM recebe_visita_cultural rvc
 JOIN patrimonio p
   ON p.id_patrimonio = rvc.id_patrimonio
 WHERE vc.id_visita = rvc.id_visita_cultural;
+
+## Gráfico e Consulta
+
+Foi criada uma consulta que exibe a **quantidade de pessoas que visitaram cada patrimônio registrado**.
+
+Utilizou-se a função `COALESCE`, pois a nova coluna `localizacao` passou a armazenar nomes de lugares que nem sempre estão cadastrados na tabela de patrimônios. Dessa forma, a função retorna:
+
+- O nome do patrimônio **ou**
+- A localização registrada na visita
+
+Isso garante que todos os registros apareçam no gráfico, mesmo aqueles inseridos posteriormente e fora do povoamento inicial.
+
+A consulta e o gráfico resultante ilustram a quantidade de visitantes por patrimônio ou local registrado.
+
 
 ALTER TABLE visita_cultural 
 ADD COLUMN localizacao VARCHAR(300);
