@@ -97,7 +97,6 @@ Para o CRUD da aplicação, foi desenvolvida a tela referente às **visitas aos 
 
 Para possibilitar o registro do local da visita, foi adicionada uma nova coluna à tabela `visita_cultural`:
 
-```sql
 ALTER TABLE visita_cultural 
 ADD COLUMN localizacao VARCHAR(300);
 
@@ -110,7 +109,7 @@ JOIN patrimonio p
   ON p.id_patrimonio = rvc.id_patrimonio
 WHERE vc.id_visita = rvc.id_visita_cultural;
 
-## Gráfico e Consulta
+### Gráfico e Consulta
 
 Foi criada uma consulta que exibe a **quantidade de pessoas que visitaram cada patrimônio registrado**.
 
@@ -122,7 +121,6 @@ Utilizou-se a função `COALESCE`, pois a nova coluna `localizacao` passou a arm
 Isso garante que todos os registros apareçam no gráfico, mesmo aqueles inseridos posteriormente e fora do povoamento inicial.
 
 A consulta e o gráfico resultante ilustram a quantidade de visitantes por patrimônio ou local registrado.
-
 
 ALTER TABLE visita_cultural 
 ADD COLUMN localizacao VARCHAR(300);
