@@ -80,6 +80,8 @@ Os modelos **EER**, **Relacional**, bem como o **Banco de Dados** e seu **povoam
 
 ## CRUD da Aplicação
 
+O projeto utiliza Python como linguagem principal, sendo executado em Jupyter Notebook. O banco de dados utilizado é o PostgreSQL.
+
 Para o CRUD da aplicação, foi desenvolvida a tela referente às **visitas aos patrimônios**. As funcionalidades incluem:
 
 - Cadastro de visitas informando:
