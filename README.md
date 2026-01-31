@@ -124,5 +124,3 @@ Isso garante que todos os registros apareçam no gráfico, mesmo aqueles inserid
 
 A consulta e o gráfico resultante ilustram a quantidade de visitantes por patrimônio ou local registrado.
 
-ALTER TABLE visita_cultural 
-ADD COLUMN localizacao VARCHAR(300);
