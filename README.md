@@ -1,6 +1,9 @@
+
 # Gestão de Petrimônios Históricos
 
 Projeto realizado para a disciplina de **Fundamentos de Banco de Dados**.
+
+Relato de projeto passo a passo: [Uploading GESTÃO DE PATRIMONIO HISTORICO (2).pdf…]()
 
 O projeto foi dividido em etapas, que consistiam em:
 - Modelagem **EER**
